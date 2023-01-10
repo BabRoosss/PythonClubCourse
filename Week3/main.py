@@ -1,22 +1,20 @@
 import random
 rand = random.randrange(1,3)
-move = input("Rock, Paper, or Scissors? ")
-if move == "rock":
-    move = 1
-elif move == "paper":
-    move = 2
-elif move == "scissors":
-    move = 3
+MOVE = input("Rock, Paper, or Scissors? ")
+if MOVE == "rock":
+    MOVE = 1
+elif MOVE == "paper":
+    MOVE = 2
+elif MOVE == "scissors":
+    MOVE = 3
 
 
-elif move == rand:
+if MOVE == rand:
     print("Tie!")
-if move != rand:
-    if ((move == 1) and (rand == 2)):
+elif MOVE != rand:
+    if ((MOVE == 1) and (rand == 2)):
         print("You lost!")
-    elif ((move == 2) and (rand == 3)):
+    elif ((MOVE == 2) and (rand == 3)):
         print("You lost!")
-    elif ((move == 3) and (rand == 1)):
+    elif ((MOVE == 3) and (rand == 1)):
         print("You lost!")
-    else:
-        print("You won!")
